@@ -9,8 +9,6 @@ def post(request, *args, **kwargs):
     try:
         data = json.loads(request.body)
         print(data)
-        product_id = data["id"]
-        skintype = data["skintype"]
 
         return render(request, "pybo/index.html", data)
     except KeyError:
