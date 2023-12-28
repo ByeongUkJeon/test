@@ -2,16 +2,11 @@ from django.db import models
 
 # Create your models here.
 
-class Question(models.Model):
-    subject = models.CharField(max_length=200)
-    content = models.TextField()
-    create_date = models.DateTimeField()
-
+class User(models.Model):
+    id = models.TextField(primary_key=True)
+    passwd = models.TextField()
+    nickname = models.TextField()
+    email = models.TextField()
+    mobile = models.TextField()
     def __str__(self):
-        return self.subject
-
-
-class Answer(models.Model):
-    question = models.ForeignKey(Question, on_delete=models.CASCADE)
-    content = models.TextField()
-    create_date = models.DateTimeField()
+        return self.id
