@@ -3,10 +3,12 @@ from django.db import models
 # Create your models here.
 
 class User(models.Model):
-    id = models.TextField(primary_key=True)
-    passwd = models.TextField()
-    nickname = models.TextField()
-    email = models.TextField()
-    mobile = models.TextField()
-    def __str__(self):
-        return self.id
+    account = models.CharField(max_length=50, primary_key=True)
+    passwd = models.CharField(max_length=50)
+    nickname = models.CharField(max_length=50, blank=True, null=True)
+    mobile = models.CharField(max_length=50, blank=True, null=True)
+    email = models.CharField(max_length=50, blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'user'

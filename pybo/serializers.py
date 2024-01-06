@@ -4,4 +4,4 @@ from pybo.models import User
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['id', 'passwd', 'nickname', 'email', 'mobile']
+        fields = ['account', 'passwd', 'nickname', 'email', 'mobile']
