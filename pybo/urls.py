@@ -10,5 +10,7 @@ urlpatterns = [
     path('', include(router.urls)),
     path('signup/', views.signup),
     path('login/', views.login),
-
+    path('idCheck/', views.idCheck),
+    path('nickCheck/', views.nicknameCheck),
+    path('addTale/', views.addTale)
 ]

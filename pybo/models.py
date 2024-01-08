@@ -12,3 +12,14 @@ class User(models.Model):
     class Meta:
         managed = False
         db_table = 'user'
+
+
+class Tale(models.Model):
+    num = models.AutoField(primary_key=True)
+    imglink = models.CharField(max_length=300)
+    title = models.CharField(max_length=50)
+    content = models.TextField()
+
+    class Meta:
+        managed = False
+        db_table = 'tale'
